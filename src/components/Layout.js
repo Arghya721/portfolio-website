@@ -1,5 +1,8 @@
+import { Spacer } from "@nextui-org/react";
 import { Box } from "./Box.js";
 import { Content } from "./Content.js"
+import { Skills } from "./Skills";
+
 
 export const Layout = ({ children }) => (
   <Box
@@ -9,5 +12,7 @@ export const Layout = ({ children }) => (
   >
     {children}
     <Content />
+    <Spacer />
+    <Skills />
   </Box>
 );
