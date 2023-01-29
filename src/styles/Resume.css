@@ -1,7 +1,5 @@
 .resume-item{
-    font-size: 20px;
     padding: 0 0 20px 20px;
-    margin-top: -2px;
     border-left: 2px solid #18d26e;
     position: relative;
 }
@@ -17,3 +15,11 @@
     background: #fff;
     border: 2px solid #18d26e;
 }
+
+h6 {
+    margin-top: 1rem;
+}
+
+/* .resume-inner-field {
+    
+} */
