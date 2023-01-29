@@ -82,12 +82,12 @@ export const Skills = () => {
       <Grid.Container justify="center">
         {skills.map((skill) => (
           <Grid
-            xs={12}
-            xl={6}
+          xs={12} md={6}
             css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center"
+            key = {skill.name}
           >
             <Text
               css={{
