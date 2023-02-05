@@ -95,9 +95,9 @@ export const Resume = () => {
               >
                 HIGHER SECONDARY
 
-                <Text h5>2019</Text>
-                <Text h5> Vidya Bharati Chinmaya Vidyalaya</Text>
-                <Text h5>Percentage-85%</Text>
+                <Text className="resume-inner-item" h5>2019</Text>
+                <Text className="resume-inner-item" h5> Vidya Bharati Chinmaya Vidyalaya</Text>
+                <Text className="resume-inner-item" h5>Percentage-85%</Text>
               </h5>
 
               <h5
