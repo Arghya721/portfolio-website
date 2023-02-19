@@ -3,7 +3,8 @@ import { Box } from "./Box.js";
 import { Content } from "./Content.js"
 import { Skills } from "./Skills";
 import {Experience} from "./Experience";
-
+import {Projects} from "./Projects";
+ 
 
 export const Layout = ({ children }) => (
   <Box
@@ -16,5 +17,6 @@ export const Layout = ({ children }) => (
     <Spacer />
     <Skills />
     <Experience />
+    <Projects />
   </Box>
 );
