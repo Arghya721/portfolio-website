@@ -10,6 +10,9 @@ import {
 
 import { Box } from "./Box.js";
 
+import { Crypto } from "./ProjectCards/Crypto";
+import { Blog } from "./ProjectCards/Blog.js";
+
 export const Projects = () => {
   return (
     <Box css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
@@ -26,17 +29,14 @@ export const Projects = () => {
         </Text>
       </Grid.Container>
       <Spacer y={2} />
-      <Grid.Container
-          gap={2}
-          justify="center"
-          css={{
-            d: "flex",
-            fd: "row",
-            jc: "space-around",
-          }}
-        >
-            Coming Soon
-         </Grid.Container>
+      <Grid.Container justify="center" >
+        <Grid xs={12} md={6} sm={4}>
+          <Crypto />
+        </Grid>
+        {/* <Grid xs={12} sm={4}>
+          <Blog />
+        </Grid> */}
+      </Grid.Container>
     </Box>
   );
-}
+};
