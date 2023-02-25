@@ -4,6 +4,7 @@ import { Content } from "./Content.js"
 import { Skills } from "./Skills";
 import {Experience} from "./Experience";
 import {Projects} from "./Projects";
+import {Contact} from "./Contact";
  
 
 export const Layout = ({ children }) => (
@@ -18,5 +19,6 @@ export const Layout = ({ children }) => (
     <Skills />
     <Experience />
     <Projects />
+    <Contact />
   </Box>
 );

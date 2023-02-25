@@ -12,6 +12,7 @@ import { Box } from "./Box.js";
 
 import { Crypto } from "./ProjectCards/Crypto";
 import { Blog } from "./ProjectCards/Blog.js";
+import { Noongil } from "./ProjectCards/Noongil.js";
 
 export const Projects = () => {
   return (
@@ -30,12 +31,24 @@ export const Projects = () => {
       </Grid.Container>
       <Spacer y={2} />
       <Grid.Container justify="center" >
-        <Grid xs={12} md={6} sm={4}>
+        <Grid xs={12} md={4} sm={4} xl={4} css={{
+              padding: "0px 0px 0px 0px",
+            }}
+            justify="center">
           <Crypto />
         </Grid>
-        {/* <Grid xs={12} sm={4}>
+        <Grid xs={12} md={4} sm={4} xl={4} css={{
+              padding: "0px 0px 0px 0px",
+            }}
+            justify="center"> 
           <Blog />
-        </Grid> */}
+        </Grid>
+        <Grid xs={12} md={4} sm={4} xl={4} css={{
+              padding: "0px 0px 0px 0px",
+            }}
+            justify="center">
+          <Noongil />
+        </Grid>
       </Grid.Container>
     </Box>
   );

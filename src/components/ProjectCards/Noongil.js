@@ -1,18 +1,18 @@
-import { Card, Col, Row, Link , Text } from "@nextui-org/react";
+import { Card, Col, Row, Link, Text } from "@nextui-org/react";
 
 import { SocialIcon } from "react-social-icons";
 
-export const Blog = () => (
+export const Noongil = () => (
   <Card css={{ w: "600px", h: "300px", mb: "30px" }}>
-  
-      <iframe
-      src="https://blogwebsite.up.railway.app/"
-      style={{ height: "100%",
-      width: "100%",
-      border: "none",
-      overflow: "hidden",
-      scrolling: "no",
-     }}
+    <iframe
+      src="https://csb-5clvwq.netlify.app/"
+      style={{
+        height: "100%",
+        width: "100%",
+        border: "none",
+        overflow: "hidden",
+        scrolling: "no",
+      }}
     ></iframe>
 
     <Card.Footer
@@ -27,22 +27,22 @@ export const Blog = () => (
     >
       <Row>
         <Col>
-        <Link href="https://blogwebsite.up.railway.app/" target="_blank">
-          <Text
-            h4
-            css={{
-              textGradient: "45deg, $yellow600 -20%, $red600 100%",
-            }}
-            weight="bold"
-          >
-            Blog Website
-          </Text>
-        </Link>
+          <Link href="https://csb-5clvwq.netlify.app/" target="_blank">
+            <Text
+              h4
+              css={{
+                textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              }}
+              weight="bold"
+            >
+              Noongil
+            </Text>
+          </Link>
         </Col>
         <Col>
           <Row justify="flex-end">
             <SocialIcon
-              url="https://github.com/Arghya721/blogwebsite"
+              url="https://github.com/Arghya721/Noongil"
               fgColor="white"
               target="_blank"
               style={{
