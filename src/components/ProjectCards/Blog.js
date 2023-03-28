@@ -6,7 +6,7 @@ export const Blog = () => (
   <Card css={{ w: "600px", h: "300px", mb: "30px" }}>
   
       <iframe
-      src="https://blogwebsite.up.railway.app/"
+      src="https://blogwebsite-hm18.onrender.com/"
       style={{ height: "100%",
       width: "100%",
       border: "none",
@@ -27,7 +27,7 @@ export const Blog = () => (
     >
       <Row>
         <Col>
-        <Link href="https://blogwebsite.up.railway.app/" target="_blank">
+        <Link href="https://blogwebsite-hm18.onrender.com/" target="_blank">
           <Text
             h4
             css={{
