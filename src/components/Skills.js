@@ -66,7 +66,7 @@ export const Skills = () => {
   ];
 
   return (
-    <Box css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
+    <Box id="skills" css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
       <Grid.Container justify="center">
         <Text
           css={{

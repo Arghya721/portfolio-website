@@ -16,7 +16,7 @@ import { Noongil } from "./ProjectCards/Noongil.js";
 
 export const Projects = () => {
   return (
-    <Box css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
+    <Box id="project" css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
       <Grid.Container justify="center">
         <Text
           css={{
