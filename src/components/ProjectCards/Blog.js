@@ -6,6 +6,7 @@ export const Blog = () => (
   <Card css={{ w: "600px", h: "300px", mb: "30px" }}>
   
       <iframe
+      title="Blog Website"
       src="https://blogwebsite-hm18.onrender.com/"
       style={{ height: "100%",
       width: "100%",

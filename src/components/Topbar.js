@@ -1,4 +1,4 @@
-import React, { useEffect, useRef , useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Link, Text } from "@nextui-org/react";
 import { AcmeLogo } from "./Acemelogo";
 

@@ -5,6 +5,7 @@ import { SocialIcon } from "react-social-icons";
 export const Noongil = () => (
   <Card css={{ w: "600px", h: "300px", mb: "30px" }}>
     <iframe
+      title="Noongil"
       src="https://csb-5clvwq.netlify.app/"
       style={{
         height: "100%",

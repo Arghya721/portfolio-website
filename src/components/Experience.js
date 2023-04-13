@@ -1,11 +1,6 @@
 import {
-  Progress,
   Grid,
   Text,
-  Spacer,
-  css,
-  Tooltip,
-  Card,
 } from "@nextui-org/react";
 import { Box } from "./Box.js";
 import "../styles/Experience.css";

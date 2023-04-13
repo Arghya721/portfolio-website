@@ -36,7 +36,7 @@ export const Contact = () => {
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
-          <a href="https://twitter.com/Arghya72" target="_blank">
+          <a href="https://twitter.com/Arghya72" rel="noreferrer" target="_blank">
             <AiFillTwitterSquare size="2em" color="black" />
           </a>
         </Grid>
@@ -44,7 +44,7 @@ export const Contact = () => {
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
-          <a href="https://www.instagram.com/_arghya.deep_/" target="_blank">
+          <a href="https://www.instagram.com/_arghya.deep_/" rel="noreferrer" target="_blank">
             <AiFillInstagram size="2em" color="black" />
           </a>
         </Grid>
@@ -53,7 +53,7 @@ export const Contact = () => {
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
-          <a href="https://www.linkedin.com/in/arghyadeep-ghosh-08207b1a9/" target="_blank">
+          <a href="https://www.linkedin.com/in/arghyadeep-ghosh-08207b1a9/" rel="noreferrer" target="_blank">
             <AiOutlineLinkedin size="2em" color="black" />
           </a>
         </Grid>
@@ -62,7 +62,7 @@ export const Contact = () => {
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
-          <a href="https://github.com/Arghya721" target="_blank">
+          <a href="https://github.com/Arghya721" rel="noreferrer" target="_blank">
             <AiFillGithub size="2em" color="black" />
           </a>
         </Grid>
