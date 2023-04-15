@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Link, Text } from "@nextui-org/react";
+import { Navbar, Link, Text, Switch, changeTheme , useTheme } from "@nextui-org/react";
 import { AcmeLogo } from "./Acemelogo";
+import { SunIcon } from "./SunIcon";
+import { MoonIcon } from "./MoonIcon";
+import { useTheme as useNextTheme } from "next-themes";
+
 
 export const Topbar = () => {
+
+  const { type, isDark } = useTheme();
+
+  const handleChange = () => {
+    // const nextTheme = isDark ? 'light' : 'dark';
+    const storageTheme = window.localStorage.getItem('data-theme');
+    const nextTheme = storageTheme === 'dark' ? 'light' : 'dark';
+
+    window.localStorage.setItem('data-theme', nextTheme); // you can use any storage
+    changeTheme(nextTheme);
+  }
+
+
   const collapseItems = [
     "About Me",
     "Skill Section",
@@ -173,6 +190,15 @@ export const Topbar = () => {
         {/* <Navbar.Link isActive={active.contact} onClick={handleContactClick} css={{ cursor: 'pointer' }} >Contact Me</Navbar.Link> */}
       </Navbar.Content>
       
+      <Navbar.Content>
+      <Switch
+            checked={isDark}
+            size="xl"
+            iconOff={<SunIcon filled />}
+            iconOn={<MoonIcon filled />}
+            onChange={handleChange}
+          />
+      </Navbar.Content>
 
       <Navbar.Collapse showIn="xs">
           {collapseItems.map((item, index) => (
