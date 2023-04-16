@@ -22,25 +22,26 @@ const darkTheme = createTheme({
 
 
 const Main = () => {
-  const [isDark , setIsDark] = React.useState(false);
-
+  const [isDark , setIsDark] = React.useState(window.localStorage.getItem('data-theme') === 'dark');
+  
   React.useEffect(() => {
-    const theme = window.localStorage.getItem("data-theme");
-    if (theme === "dark") {
+    const theme = window.localStorage.getItem('data-theme');
+    if (theme === 'dark') {
       setIsDark(true);
-    } else {
-      setIsDark(false);
     }
   }, []);
+
+
 
   return (
     <NextThemesProvider  
     attribute="class"
+    enableSystem={isDark}
     value={{
-      light: lightTheme.className,
       dark: darkTheme.className,
+      light: lightTheme.className,
     }}>
-  <NextUIProvider theme={isDark ? darkTheme : lightTheme} disableBaseline={true}>
+  <NextUIProvider disableBaseline={true}>
     <App />
    </NextUIProvider>
     </NextThemesProvider>
