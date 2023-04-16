@@ -1,8 +1,12 @@
-import { Text, Spacer , Grid , Image  } from "@nextui-org/react";
+import { Text, Spacer , Grid , Image, useTheme } from "@nextui-org/react";
 import { Box } from "./Box.js";
 import MyPic from "../images/ArghyaPic.jpeg";
 
-export const Content = () => (
+export const Content = () => {
+  
+  const { type, isDark } = useTheme();
+  
+  return (
   <Box css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
     <Grid.Container justify="center" css={{paddingTop : "50px"}}>
       <Grid xs={12} xl={6} css={{
@@ -23,7 +27,7 @@ export const Content = () => (
           Developer
           <Text size={20} weight="bold" css={{ 
             // text graident will be black
-            textGradient: "45deg, $black -20%, $black 50%",
+            textGradient: !isDark ? "45deg, $black -20%, $black 50%" : "45deg, $blue600 -20%, $pink600 50%",
            }}>
           Hey there! I'm a Full Stack Developer from India. I'm passionate about building web applications and learning new technologies. 
           <br />
@@ -31,6 +35,7 @@ export const Content = () => (
           </Text>
         </Text>
       </Grid>
+      <Spacer y={1} />
       <Grid xs={12} xl={6}>
         <Image
          // give image a rounded corner
@@ -48,4 +53,4 @@ export const Content = () => (
 
     <Spacer y={1} />
   </Box>
-);
+)};

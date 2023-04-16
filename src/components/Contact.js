@@ -1,4 +1,4 @@
-import { Text , Grid , Spacer } from "@nextui-org/react";
+import { Text , Grid , Spacer , useTheme } from "@nextui-org/react";
 import {
   AiFillGithub,
   AiFillTwitterSquare,
@@ -9,6 +9,9 @@ import {
 import { Box } from "./Box.js";
 
 export const Contact = () => {
+  const { type, isDark } = useTheme();
+
+
   return (
     <Box id="contact" css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
 
@@ -37,7 +40,7 @@ export const Contact = () => {
             }}
             justify="center">
           <a href="https://twitter.com/Arghya72" rel="noreferrer" target="_blank">
-            <AiFillTwitterSquare size="2em" color="black" />
+            <AiFillTwitterSquare size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
         <Grid xs={12} md={2} sm={2} xl={2} css={{
@@ -45,7 +48,7 @@ export const Contact = () => {
             }}
             justify="center">
           <a href="https://www.instagram.com/_arghya.deep_/" rel="noreferrer" target="_blank">
-            <AiFillInstagram size="2em" color="black" />
+            <AiFillInstagram size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
 
@@ -54,7 +57,7 @@ export const Contact = () => {
             }}
             justify="center">
           <a href="https://www.linkedin.com/in/arghyadeep-ghosh-08207b1a9/" rel="noreferrer" target="_blank">
-            <AiOutlineLinkedin size="2em" color="black" />
+            <AiOutlineLinkedin size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
 
@@ -63,7 +66,7 @@ export const Contact = () => {
             }}
             justify="center">
           <a href="https://github.com/Arghya721" rel="noreferrer" target="_blank">
-            <AiFillGithub size="2em" color="black" />
+            <AiFillGithub size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
       </Grid.Container>

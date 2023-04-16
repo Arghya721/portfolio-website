@@ -3,8 +3,6 @@ import { Navbar, Link, Text, Switch, changeTheme , useTheme } from "@nextui-org/
 import { AcmeLogo } from "./Acemelogo";
 import { SunIcon } from "./SunIcon";
 import { MoonIcon } from "./MoonIcon";
-import { useTheme as useNextTheme } from "next-themes";
-
 
 export const Topbar = () => {
 

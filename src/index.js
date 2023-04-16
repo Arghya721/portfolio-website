@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createTheme, NextUIProvider } from "@nextui-org/react";
+import { createTheme, NextUIProvider , changeTheme } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 const lightTheme = createTheme({
@@ -40,9 +40,9 @@ const Main = () => {
       light: lightTheme.className,
       dark: darkTheme.className,
     }}>
-      <NextUIProvider theme={isDark ? darkTheme : lightTheme}>
+  <NextUIProvider theme={isDark ? darkTheme : lightTheme} disableBaseline={true}>
     <App />
-  </NextUIProvider>
+   </NextUIProvider>
     </NextThemesProvider>
     
   )
