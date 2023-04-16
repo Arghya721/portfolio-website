@@ -9,7 +9,7 @@ import {
 import { Box } from "./Box.js";
 
 export const Contact = () => {
-  const { type, isDark } = useTheme();
+  const { isDark } = useTheme();
 
 
   return (

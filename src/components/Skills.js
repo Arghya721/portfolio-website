@@ -65,7 +65,7 @@ export const Skills = () => {
     },
   ];
 
-  const { type, isDark } = useTheme(); 
+  const { isDark } = useTheme(); 
 
   return (
     <Box id="skills" css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>

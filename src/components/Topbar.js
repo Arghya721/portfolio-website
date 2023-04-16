@@ -6,7 +6,7 @@ import { MoonIcon } from "./MoonIcon";
 
 export const Topbar = () => {
 
-  const { type, isDark } = useTheme();
+  const { isDark } = useTheme();
 
   const handleChange = () => {
     // const nextTheme = isDark ? 'light' : 'dark';

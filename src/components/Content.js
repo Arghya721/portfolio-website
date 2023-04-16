@@ -4,7 +4,7 @@ import MyPic from "../images/ArghyaPic.jpeg";
 
 export const Content = () => {
   
-  const { type, isDark } = useTheme();
+  const { isDark } = useTheme();
   
   return (
   <Box css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>

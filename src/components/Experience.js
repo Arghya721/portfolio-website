@@ -15,7 +15,7 @@ import { FaSchool, FaUniversity } from "react-icons/fa";
 
 export const Experience = () => {
 
-  const { type, isDark } = useTheme();
+  const { isDark } = useTheme();
 
   // const BobbleAI = [
   //   "Implemented Location-based targeting for Mint Keyboard Sticker Pack APIs using Golang.",
