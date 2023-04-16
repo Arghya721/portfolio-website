@@ -56,7 +56,7 @@ export const Contact = () => {
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
-          <a href="https://www.linkedin.com/in/arghyadeep-ghosh-08207b1a9/" rel="noreferrer" target="_blank">
+          <a href="https://www.linkedin.com/in/arghyadeep-ghosh-08307b1a9/" rel="noreferrer" target="_blank">
             <AiOutlineLinkedin size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
