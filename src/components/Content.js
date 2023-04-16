@@ -35,7 +35,6 @@ export const Content = () => {
           </Text>
         </Text>
       </Grid>
-      <Spacer y={1} />
       <Grid xs={12} xl={6}>
         <Image
          // give image a rounded corner

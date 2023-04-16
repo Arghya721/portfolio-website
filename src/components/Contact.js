@@ -29,13 +29,13 @@ export const Contact = () => {
       <Grid.Container justify="center" style={{
         marginTop: "5rem",
       }}>
-      <Grid xs={12} md={4} sm={4} xl={4} css={{
+      <Grid xs={4} md={4} sm={4} xl={4} css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
           <Text p>@Arghyadeep | Portfolio</Text>
         </Grid>
-        <Grid xs={12} md={2} sm={2} xl={2} css={{
+        <Grid xs={2} md={2} sm={2} xl={2} css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
@@ -43,7 +43,7 @@ export const Contact = () => {
             <AiFillTwitterSquare size="2em" color={isDark ? "white" : "black"} />
           </a>
         </Grid>
-        <Grid xs={12} md={2} sm={2} xl={2} css={{
+        <Grid xs={2} md={2} sm={2} xl={2} css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
@@ -52,7 +52,7 @@ export const Contact = () => {
           </a>
         </Grid>
 
-        <Grid xs={12} md={2} sm={2} xl={2} css={{
+        <Grid xs={2} md={2} sm={2} xl={2} css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center">
@@ -61,7 +61,7 @@ export const Contact = () => {
           </a>
         </Grid>
 
-        <Grid xs={12} md={2} sm={2} xl={2} css={{
+        <Grid xs={2} md={2} sm={2} xl={2} css={{
               padding: "0px 0px 0px 0px",
             }}
             justify="center">

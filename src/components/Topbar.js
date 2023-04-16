@@ -18,11 +18,27 @@ export const Topbar = () => {
   }
 
 
-  const collapseItems = [
-    "About Me",
-    "Skill Section",
-    "Experience",
-    "Contact Me",
+  const collapseItems = [{
+    title: 'About Me',
+    onClick: () => handleAboutClick(),
+    active : "about"
+  } , 
+  {
+    title: 'Skills',
+    onClick: () => handleSkillsClick(),
+    active : "skills"
+  },
+  {
+    title: 'Experience',
+    onClick: () => handleExperienceClick(),
+    active : "experience"
+  },
+  {
+    title: 'Projects',
+    onClick: () => handleProjectClick(),
+    active : "project"
+  },
+
   ];
 
   const [active, setActive] = useState({
@@ -198,24 +214,24 @@ export const Topbar = () => {
           />
       </Navbar.Content>
 
-      <Navbar.Collapse showIn="xs">
+      <Navbar.Collapse showIn="xs" hideIn="">
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
               key={item}
               activeColor="secondary"
               css={{
-                color: index === collapseItems.length - 1 ? "$error" : "",
+                // color: index === collapseItems.length - 1 ? "$error" : "",
               }}
-              // isActive={index === 2}
+              isActive={active[item.active]}
             >
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
-                href="#"
+                onClick={item.onClick}
               >
-                {item}
+                {item.title}
               </Link>
             </Navbar.CollapseItem>
           ))}
