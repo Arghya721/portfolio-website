@@ -1,6 +1,7 @@
 import {
   Grid,
   Text,
+  useTheme,
 } from "@nextui-org/react";
 import { Box } from "./Box.js";
 import "../styles/Experience.css";
@@ -13,6 +14,9 @@ import { MdOutlineCorporateFare } from "react-icons/md";
 import { FaSchool, FaUniversity } from "react-icons/fa";
 
 export const Experience = () => {
+
+  const { isDark } = useTheme();
+
   // const BobbleAI = [
   //   "Implemented Location-based targeting for Mint Keyboard Sticker Pack APIs using Golang.",
   //   "Implemented Redis to cache JSON data to reduce the latency of Mint Keyboard Sticker API which receives 10 million requests daily.",
@@ -63,7 +67,7 @@ export const Experience = () => {
         </Text>
       </Grid.Container>
       <Grid.Container>
-        <VerticalTimeline lineColor={"black"}>
+        <VerticalTimeline lineColor={isDark ? "white" : "black"}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
@@ -74,6 +78,8 @@ export const Experience = () => {
               borderRight: "7px solid  linear-gradient(45deg,#e975a8, #726cf8)",
             }}
             date="07/2022 - present"
+            
+            dateClassName={isDark ? "date-dark" : "date-light"}
             iconStyle={{
               background: "linear-gradient(45deg,#e975a8, #726cf8)",
               color: "#fff",
@@ -120,6 +126,7 @@ export const Experience = () => {
               borderRight: "7px solid  linear-gradient(45deg,#e975a8, #726cf8)",
             }}
             date="2021-2022"
+            dateClassName={isDark ? "date-dark" : "date-light"}
             iconStyle={{
               background: "linear-gradient(45deg,#e975a8, #726cf8)",
               color: "#fff",
@@ -165,6 +172,7 @@ export const Experience = () => {
               borderRight: "7px solid  linear-gradient(45deg,#e975a8, #726cf8)",
             }}
             date="2019 - 2023"
+            dateClassName={isDark ? "date-dark" : "date-light"}
             iconStyle={{
               background: "linear-gradient(45deg,#e975a8, #726cf8)",
               color: "#fff",
@@ -216,6 +224,7 @@ export const Experience = () => {
               borderRight: "7px solid  linear-gradient(45deg,#e975a8, #726cf8)",
             }}
             date="2017 - 2018"
+            dateClassName={isDark ? "date-dark" : "date-light"}
             iconStyle={{
               background: "linear-gradient(45deg,#e975a8, #726cf8)",
               color: "#fff",

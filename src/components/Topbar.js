@@ -1,13 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Link, Text } from "@nextui-org/react";
+import { Navbar, Link, Text, Switch, changeTheme , useTheme } from "@nextui-org/react";
 import { AcmeLogo } from "./Acemelogo";
+import { SunIcon } from "./SunIcon";
+import { MoonIcon } from "./MoonIcon";
 
 export const Topbar = () => {
-  const collapseItems = [
-    "About Me",
-    "Skill Section",
-    "Experience",
-    "Contact Me",
+
+  const { isDark } = useTheme();
+
+  const handleChange = () => {
+    // const nextTheme = isDark ? 'light' : 'dark';
+    const storageTheme = window.localStorage.getItem('data-theme');
+    const nextTheme = storageTheme === 'dark' ? 'light' : 'dark';
+
+    window.localStorage.setItem('data-theme', nextTheme); // you can use any storage
+    changeTheme(nextTheme);
+  }
+
+
+  const collapseItems = [{
+    title: 'About Me',
+    onClick: () => handleAboutClick(),
+    active : "about"
+  } , 
+  {
+    title: 'Skills',
+    onClick: () => handleSkillsClick(),
+    active : "skills"
+  },
+  {
+    title: 'Experience',
+    onClick: () => handleExperienceClick(),
+    active : "experience"
+  },
+  {
+    title: 'Projects',
+    onClick: () => handleProjectClick(),
+    active : "project"
+  },
+
   ];
 
   const [active, setActive] = useState({
@@ -173,25 +204,34 @@ export const Topbar = () => {
         {/* <Navbar.Link isActive={active.contact} onClick={handleContactClick} css={{ cursor: 'pointer' }} >Contact Me</Navbar.Link> */}
       </Navbar.Content>
       
+      <Navbar.Content>
+      <Switch
+            checked={isDark}
+            size="xl"
+            iconOff={<SunIcon filled />}
+            iconOn={<MoonIcon filled />}
+            onChange={handleChange}
+          />
+      </Navbar.Content>
 
-      <Navbar.Collapse showIn="xs">
+      <Navbar.Collapse showIn="xs" hideIn="">
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
               key={item}
               activeColor="secondary"
               css={{
-                color: index === collapseItems.length - 1 ? "$error" : "",
+                // color: index === collapseItems.length - 1 ? "$error" : "",
               }}
-              // isActive={index === 2}
+              isActive={active[item.active]}
             >
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
-                href="#"
+                onClick={item.onClick}
               >
-                {item}
+                {item.title}
               </Link>
             </Navbar.CollapseItem>
           ))}

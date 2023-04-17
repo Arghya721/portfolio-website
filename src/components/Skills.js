@@ -1,4 +1,4 @@
-import { Progress, Grid, Text, Spacer } from "@nextui-org/react";
+import { Progress, Grid, Text, Spacer, useTheme } from "@nextui-org/react";
 import { Box } from "./Box.js";
 
 export const Skills = () => {
@@ -65,6 +65,8 @@ export const Skills = () => {
     },
   ];
 
+  const { isDark } = useTheme(); 
+
   return (
     <Box id="skills" css={{ px: "$50", mt: "$8", "@xsMax": { px: "$10" } }}>
       <Grid.Container justify="center">
@@ -91,7 +93,7 @@ export const Skills = () => {
           >
             <Text
               css={{
-                textGradient: "45deg, $black -20%, $black 50%",
+                textGradient: isDark ? "45deg, #ffffff -20%, #cccccc 50%" : "45deg, $black -20%, $black 50%",
                 paddingLeft: "50px",
                 fontSize: "30px",
                 "@xsMax": { fontSize: "20px" },

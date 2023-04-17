@@ -25,6 +25,14 @@ h6 {
     margin-bottom: 1rem;
 }
 
-span.vertical-timeline-element-date{
+/* span.vertical-timeline-element-date{
+    color : #3b3939;
+} */
+
+.date-dark {
+    color : #fff;
+}
+
+.date-light {
     color : #3b3939;
 }
